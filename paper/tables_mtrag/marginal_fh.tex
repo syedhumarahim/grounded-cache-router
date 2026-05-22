@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-gate marginal unsafe-served-rate reduction (mtRAG): $\Delta\mathrm{USR}=$ USR(no-X) $-$ USR(full), averaged over the six workload regimes. USR is the fraction of all queries that received a wrong cached answer. Larger $\Delta$ means the gate is more load-bearing; values near zero mean the gate is redundant with the other two on this workload.}
+\label{tab:marginal_fh}
+\begin{tabular}{l rr}
+\toprule
+Removed gate & USR(no-X) & $\Delta\mathrm{USR}$ vs.\ full \\
+\midrule
+Version (G1) & 0.064 & +0.001 \\
+Evidence (G2) & 0.063 & +0.000 \\
+Support (G3) & 0.182 & +0.118 \\
+\midrule
+None (full system) & 0.063 & n/a \\
+\bottomrule
+\end{tabular}
+\end{table}

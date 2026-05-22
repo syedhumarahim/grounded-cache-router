@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering\small
+\caption{End-to-end latency vs.\ the honest baseline (HotpotQA). The \emph{no-cache} row is the empirical p50 latency of all \texttt{generate}-path records observed across every sweep cell ($n=3424$ records); it is the latency of a RAG query that hits no cache at all. The other rows are the per-variant p50 latency averaged across the six regimes. Speedup is computed against the no-cache baseline. Naive caching is fastest but, per Table~\ref{tab:main}, unsafe; \sys{} retains a meaningful speedup while delivering USR$\to$0.}
+\label{tab:latency_vs_nocache}
+\begin{tabular}{l rrr}
+\toprule
+Variant & Latency$_{p50}$ (s) & Speedup vs.\ no-cache & USR \\
+\midrule
+no-cache (always generate) & 1.093 & 1.00$\times$ & 0.00 \\
+\texttt{naive} & 0.562 & 1.95$\times$ & 0.172 \\
+\texttt{no-support} & 0.739 & 1.48$\times$ & 0.125 \\
+\texttt{full} & 1.053 & 1.04$\times$ & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

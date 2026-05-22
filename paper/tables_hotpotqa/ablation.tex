@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-gate ablation: hit-rate vs.\ false-hit-rate across regimes (HotpotQA).}
+\label{tab:ablation}
+\begin{tabular}{l rr rr rr rr rr }
+\toprule
+ Regime & \multicolumn{2}{c}{naive} & \multicolumn{2}{c}{no-version} & \multicolumn{2}{c}{no-evidence} & \multicolumn{2}{c}{no-support} & \multicolumn{2}{c}{full} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}
+ & HR & FH & HR & FH & HR & FH & HR & FH & HR & FH \\
+\midrule
+exact\_repeat & 0.41 & 0.37 & 0.41 & 0.00 & 0.41 & 0.00 & 0.41 & 0.37 & 0.41 & 0.00 \\
+paraphrase & 0.40 & 0.56 & 0.40 & 0.00 & 0.40 & 0.00 & 0.40 & 0.53 & 0.40 & 0.00 \\
+near\_miss & 0.62 & 0.00 & 0.62 & 0.00 & 0.62 & 0.00 & 0.62 & 0.00 & 0.62 & 0.00 \\
+document\_drift & 0.62 & 0.56 & 0.24 & 0.00 & 0.24 & 0.00 & 0.24 & 0.58 & 0.24 & 0.00 \\
+long\_shared\_doc & 0.41 & 0.37 & 0.41 & 0.00 & 0.41 & 0.00 & 0.41 & 0.37 & 0.41 & 0.00 \\
+bounded\_kb\_cag & 0.41 & 0.37 & 0.41 & 0.00 & 0.41 & 0.00 & 0.41 & 0.37 & 0.41 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

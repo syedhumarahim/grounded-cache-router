@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-gate ablation: hit-rate vs.\ false-hit-rate across regimes.}
+\label{tab:ablation}
+\begin{tabular}{l rr rr rr rr rr }
+\toprule
+ Regime & \multicolumn{2}{c}{naive} & \multicolumn{2}{c}{no-version} & \multicolumn{2}{c}{no-evidence} & \multicolumn{2}{c}{no-support} & \multicolumn{2}{c}{full} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}
+ & HR & FH & HR & FH & HR & FH & HR & FH & HR & FH \\
+\midrule
+exact\_repeat & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 \\
+paraphrase & 0.37 & 0.62 & 0.37 & 0.62 & 0.37 & 0.62 & 0.37 & 0.62 & 0.37 & 0.62 \\
+near\_miss & 0.60 & 0.00 & 0.60 & 0.00 & 0.60 & 0.00 & 0.60 & 0.00 & 0.60 & 0.00 \\
+document\_drift & 0.62 & 0.85 & 0.24 & 0.42 & 0.24 & 0.42 & 0.24 & 0.42 & 0.24 & 0.42 \\
+long\_shared\_doc & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 \\
+bounded\_kb\_cag & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 & 0.36 & 0.83 \\
+\bottomrule
+\end{tabular}
+\end{table}

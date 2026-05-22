@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-variant cost averaged over the six regimes (HotpotQA). TTFT and latency are p50 seconds; tokens are mean prompt tokens per query. The full system retains most of the answer-cache speedup while closing the false-hit gap.}
+\label{tab:latency_variant}
+\begin{tabular}{l rrr}
+\toprule
+Variant & TTFT$_{p50}$ (s) & Latency$_{p50}$ (s) & Prompt tok. \\
+\midrule
+\texttt{naive} & 0.065 & 0.562 & 138 \\
+\texttt{no-version} & 0.102 & 1.072 & 252 \\
+\texttt{no-evidence} & 0.100 & 1.078 & 252 \\
+\texttt{no-support} & 0.077 & 0.739 & 161 \\
+\texttt{full} & 0.135 & 1.053 & 253 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering\small
+\caption{Naive semantic answer cache vs.\ \sys (full evidence validation) across regimes (HotpotQA). \textbf{aHR} is the answer-cache hit rate (fraction of queries served from cache); \textbf{USR} is the unsafe-served-rate (fraction of \emph{all} queries that received a wrong cached answer, our primary safety metric); \textbf{FH}$=$USR/aHR is the conditional false-hit rate among served cached answers.}
+\label{tab:main}
+\begin{tabular}{l rrr rrr}
+\toprule
+ & \multicolumn{3}{c}{Naive} & \multicolumn{3}{c}{\sys (full)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Regime & aHR & USR & FH & aHR & USR & FH \\
+\midrule
+exact\_repeat & 0.41 & 0.15 & 0.37 & 0.04 & 0.00 & 0.00 \\
+paraphrase & 0.40 & 0.22 & 0.56 & 0.04 & 0.00 & 0.00 \\
+near\_miss & 0.62 & 0.00 & 0.00 & 0.04 & 0.00 & 0.00 \\
+document\_drift & 0.62 & 0.35 & 0.56 & 0.01 & 0.00 & 0.00 \\
+long\_shared\_doc & 0.41 & 0.15 & 0.37 & 0.06 & 0.00 & 0.00 \\
+bounded\_kb\_cag & 0.41 & 0.15 & 0.37 & 0.06 & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

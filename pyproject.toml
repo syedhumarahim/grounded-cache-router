@@ -1,0 +1,31 @@
+[project]
+name = "ragcache"
+version = "0.0.1"
+description = "Evidence-validated cache routing for RAG (arXiv project)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "sentence-transformers>=3.0",
+    "faiss-cpu>=1.8",
+    "datasets>=2.20",
+    "pydantic>=2.7",
+    "httpx>=0.27",
+    "tiktoken>=0.7",
+    "rich>=13.7",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+api = ["anthropic>=0.40", "openai>=1.40"]
+serve = ["vllm>=0.6"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100

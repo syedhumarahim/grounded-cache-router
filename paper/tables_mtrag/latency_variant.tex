@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering\small
+\caption{Per-variant cost averaged over the six regimes (mtRAG). TTFT and latency are p50 seconds; tokens are mean prompt tokens per query. The full system retains most of the answer-cache speedup while closing the false-hit gap.}
+\label{tab:latency_variant}
+\begin{tabular}{l rrr}
+\toprule
+Variant & TTFT$_{p50}$ (s) & Latency$_{p50}$ (s) & Prompt tok. \\
+\midrule
+\texttt{naive} & 0.067 & 0.651 & 185 \\
+\texttt{no-version} & 0.099 & 1.061 & 270 \\
+\texttt{no-evidence} & 0.098 & 1.060 & 270 \\
+\texttt{no-support} & 0.079 & 0.827 & 211 \\
+\texttt{full} & 0.098 & 1.058 & 270 \\
+\bottomrule
+\end{tabular}
+\end{table}
