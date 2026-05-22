@@ -13,3 +13,4 @@ data/indexes/
 runs/
 *.faiss
 .DS_Store
+paper/

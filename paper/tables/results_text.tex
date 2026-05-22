@@ -1,5 +1,0 @@
-\paragraph{Headline.}
-On HotpotQA, \sys{} is a pure no-op on benign regimes (\texttt{exact\_repeat}, \texttt{paraphrase}, \texttt{long\_shared\_doc}, \texttt{bounded\_kb\_cag}): hit-rate and false-hit rate are identical to the naive baseline, as expected since the same evidence yields the same cached answer. On \texttt{near\_miss}, naive achieves HR=60.0\% with FH=0.0\%; \sys{} matches at HR=60.0\% and FH=0.0\%.
-
-\paragraph{Where the validator pays its way.}
-The \texttt{document\_drift} regime is where evidence validation earns its keep. The cache is primed on the base corpus and then replayed under a single mutated snapshot whose numeric tokens have changed. Naive semantic caching serves HR=62.0\% with a false-hit rate of 85.5\%; \sys{} drives the false-hit rate to 41.7\% (relative reduction 51.3\%) at a hit-rate cost of 38.0~percentage points. This is the design point of the system: trade some reuse on adversarial traffic to eliminate hits that would have returned stale answers.

@@ -1,3 +1,0 @@
-On mtRAG, naive semantic caching is catastrophically unsafe: USR ranges from 26.0\% to 51.5\% across the benign-looking regimes because multi-turn referent shift routinely breaks cache assumptions. \sys{} reduces USR by more than an order of magnitude on every affected regime.
-
-The \texttt{document\_drift} regime is the design point for the validator. Naive caching answers from cache for 56.5\% of queries with USR=51.5\%; \sys{} answers from cache for 2.0\% of queries with USR=1.5\%, a 97.1\% relative reduction (34$\times$ fewer unsafe served answers). The validator trades aggressive answer-cache reuse on this adversarial regime for the safety guarantee that almost no query receives a stale cached answer.
