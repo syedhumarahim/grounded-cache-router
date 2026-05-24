@@ -1,4 +1,4 @@
-# GroundedCache: Evidence-Validated Cache Routing for RAG
+# Evidence-Validated Cache Routing for RAG
 
 **Paper:** [Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?](cache_llm.pdf)
 
